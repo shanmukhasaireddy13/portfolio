@@ -556,7 +556,7 @@ const Home = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span>B.Tech Computer Science</span>
-                    <span className="font-semibold">2022-2026</span>
+                    <span className="font-semibold">2023-2027</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>Specialization: AI & Robotics</span>
