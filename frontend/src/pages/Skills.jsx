@@ -72,14 +72,14 @@ const Skills = () => {
     },
     {
       title: "S (A+) Grades",
-      year: "2023-2024",
+      year: "2023-2025",
       icon: Target,
       gradient: "from-green-500 to-emerald-600",
       description: "Python Programming, DSA, Java Programming, Web Programming"
     },
     {
       title: "Academic Excellence",
-      year: "2023-2024",
+      year: "2023-2025",
       icon: Lightbulb,
       gradient: "from-yellow-500 to-orange-600",
       description: "CGPA: 9.01/10 at VIT Chennai"
