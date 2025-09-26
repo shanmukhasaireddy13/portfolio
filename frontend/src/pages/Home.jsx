@@ -383,7 +383,7 @@ const Home = () => {
               </motion.button>
               
               <motion.a
-                href="#"
+                href="https://drive.google.com/file/d/1T2ovn3WbnFihBeRqjgH686bbYwPWVpcF/view?usp=drive_link"
                 onClick={(e) => {
                   e.preventDefault()
                   // Here you would typically trigger a download of your resume
