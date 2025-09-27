@@ -8,6 +8,44 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "reusepkg",
+      description: "An open-source npm CLI tool that reuses Node.js packages via symlinks, saving 50-80% disk space and speeding up project setup with smart package discovery and cross-platform support.",
+      image: "/images/projects/reusepkg.svg",
+      category: "tools",
+      technologies: ["Node.js", "Commander.js", "Chalk", "Inquirer", "NPM", "CLI"],
+      features: [
+        "Smart package discovery and symlink management",
+        "Cross-platform support (Linux/macOS symlinks, Windows fallback)",
+        "Colorful interactive CLI with health checks",
+        "Registry cleanup and search functionality",
+        "50-80% disk space savings",
+        "Published on npm registry"
+      ],
+      github: "https://github.com/shanmukhasaireddy13/reusepkg",
+      live: "https://www.npmjs.com/package/reusepkg",
+      type: "cli-tool"
+    },
+    {
+      id: 2,
+      title: "LifeLink Hospital Console",
+      description: "A comprehensive hospital operations console with authentication, admin controls, incidents management, and live incoming patients map with OSRM routing and ambulance animation.",
+      image: "/images/projects/lifelink-hospital.svg",
+      category: "fullstack",
+      technologies: ["React", "Vite", "Express", "MongoDB", "AWS DynamoDB", "React Router", "Leaflet", "OSRM"],
+      features: [
+        "Authentication and admin controls",
+        "Live incoming patients map with OSRM routing",
+        "Ambulance animation and geolocation positioning",
+        "Incidents, doctors, and appointments management",
+        "React Context for session management",
+        "Responsive UI with Tailwind CSS"
+      ],
+      github: "https://github.com/shanmukhasaireddy13/lifelink-hospital-console",
+      live: "https://lifelink-hospital-console.vercel.app",
+      type: "web-app"
+    },
+    {
+      id: 3,
       title: "Leave It For Me",
       description: "A comprehensive full-stack academic assistant system for VIT students, featuring a MERN web application and Flutter mobile app to manage assignments and deadlines.",
       image: "/images/projects/leave-it-for-me.png",
@@ -28,7 +66,7 @@ const Projects = () => {
       mobileAppUrl: "https://github.com/saireddy123456/leaveitforme-link/raw/main/releases/leaveitforme-latest.apk"
     },
     {
-      id: 2,
+      id: 4,
       title: "InfraVision",
       description: "AI-based infrastructure monitoring system that detects and classifies infrastructure issues from uploaded images using computer vision and Google Gemini.",
       image: "/images/projects/infravision.png",
@@ -47,7 +85,7 @@ const Projects = () => {
       type: "web-app"
     },
     {
-      id: 3,
+      id: 5,
       title: "Campus Connect",
       description: "A Flutter mobile application designed to enhance campus connectivity and communication among students and faculty.",
       image: "/images/projects/campus-connect.png",
@@ -66,7 +104,7 @@ const Projects = () => {
       type: "mobile-app"
     },
     {
-      id: 4,
+      id: 6,
       title: "Todo List App",
       description: "A simple yet powerful todo list application with modern UI and local storage functionality.",
       image: "/images/projects/todo-list.png",
@@ -85,7 +123,7 @@ const Projects = () => {
       type: "static-page"
     },
     {
-      id: 5,
+      id: 7,
       title: "Weather App",
       description: "A weather application that provides real-time weather information with a beautiful and responsive interface.",
       image: "/images/projects/weather-app.png",
@@ -112,6 +150,7 @@ const Projects = () => {
     { id: 'mobile', label: 'Mobile Apps', icon: Smartphone },
     { id: 'static', label: 'Static Pages', icon: Globe },
     { id: 'web', label: 'Web Apps', icon: Globe },
+    { id: 'tools', label: 'CLI Tools', icon: Code },
     { id: 'flutter', label: 'Flutter', icon: Smartphone }
   ]
 
@@ -120,6 +159,7 @@ const Projects = () => {
     : projects.filter(project => {
         if (activeFilter === 'web') return project.type === 'web-app'
         if (activeFilter === 'flutter') return project.technologies.includes('Flutter')
+        if (activeFilter === 'tools') return project.category === 'tools'
         return project.category === activeFilter
       })
 
@@ -128,6 +168,7 @@ const Projects = () => {
       case 'web-app': return Globe
       case 'mobile-app': return Smartphone
       case 'static-page': return Code
+      case 'cli-tool': return Code
       default: return Code
     }
   }
@@ -146,7 +187,7 @@ const Projects = () => {
             My <span className="text-primary-600 dark:text-primary-400">Projects</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A showcase of my work ranging from full-stack applications and AI-powered solutions to mobile apps and static websites.
+            A showcase of my work ranging from full-stack applications, AI-powered solutions, CLI tools, mobile apps, and static websites.
           </p>
         </motion.div>
 

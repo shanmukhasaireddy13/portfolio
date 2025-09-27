@@ -47,9 +47,9 @@ const About = () => {
 
   const stats = [
     { icon: Calendar, label: "Experience", value: "3+ Years", color: "text-blue-600" },
-    { icon: Code, label: "Projects", value: "6+", color: "text-purple-600" },
-    { icon: Brain, label: "Skills", value: "15+", color: "text-green-600" },
-    { icon: Award, label: "Achievements", value: "5+", color: "text-yellow-600" }
+    { icon: Code, label: "Projects", value: "8+", color: "text-purple-600" },
+    { icon: Brain, label: "Skills", value: "20+", color: "text-green-600" },
+    { icon: Award, label: "Achievements", value: "6+", color: "text-yellow-600" }
   ]
 
   return (
@@ -259,7 +259,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { title: 'Full Stack Development', icon: '⚛️', desc: 'React, Node.js, MongoDB' },
-              { title: 'Mobile Development', icon: '📱', desc: 'Flutter, Firebase' },
+              { title: 'CLI Tools & NPM', icon: '📦', desc: 'Commander.js, Chalk, Inquirer' },
               { title: 'AI & Machine Learning', icon: '🤖', desc: 'TensorFlow.js, Computer Vision' },
               { title: 'Problem Solving', icon: '🧩', desc: 'DSA, LeetCode' }
             ].map((skill, index) => (

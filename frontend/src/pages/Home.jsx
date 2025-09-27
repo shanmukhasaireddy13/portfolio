@@ -39,6 +39,44 @@ const Home = () => {
   const projects = [
     {
       id: 1,
+      title: "reusepkg",
+      description: "An open-source npm CLI tool that reuses Node.js packages via symlinks, saving 50-80% disk space and speeding up project setup with smart package discovery and cross-platform support.",
+      image: "/images/projects/reusepkg.svg",
+      category: "tools",
+      technologies: ["Node.js", "Commander.js", "Chalk", "Inquirer", "NPM", "CLI"],
+      features: [
+        "Smart package discovery and symlink management",
+        "Cross-platform support (Linux/macOS symlinks, Windows fallback)",
+        "Colorful interactive CLI with health checks",
+        "Registry cleanup and search functionality",
+        "50-80% disk space savings",
+        "Published on npm registry"
+      ],
+      github: "https://github.com/shanmukhasaireddy13/reusepkg",
+      live: "https://www.npmjs.com/package/reusepkg",
+      type: "cli-tool"
+    },
+    {
+      id: 2,
+      title: "LifeLink Hospital Console",
+      description: "A comprehensive hospital operations console with authentication, admin controls, incidents management, and live incoming patients map with OSRM routing and ambulance animation.",
+      image: "/images/projects/lifelink-hospital.svg",
+      category: "fullstack",
+      technologies: ["React", "Vite", "Express", "MongoDB", "AWS DynamoDB", "React Router", "Leaflet", "OSRM"],
+      features: [
+        "Authentication and admin controls",
+        "Live incoming patients map with OSRM routing",
+        "Ambulance animation and geolocation positioning",
+        "Incidents, doctors, and appointments management",
+        "React Context for session management",
+        "Responsive UI with Tailwind CSS"
+      ],
+      github: "https://github.com/shanmukhasaireddy13/lifelink-hospital-console",
+      live: "https://lifelink-hospital-console.vercel.app",
+      type: "web-app"
+    },
+    {
+      id: 3,
       title: "Leave It For Me",
       description: "A comprehensive full-stack academic assistant system for VIT students, featuring a MERN web application and Flutter mobile app to manage assignments and deadlines.",
       image: "/images/projects/leave-it-for-me.png",
@@ -59,7 +97,7 @@ const Home = () => {
       mobileAppUrl: "https://github.com/saireddy123456/leaveitforme-link/raw/main/releases/leaveitforme-latest.apk"
     },
     {
-      id: 2,
+      id: 4,
       title: "InfraVision",
       description: "AI-based infrastructure monitoring system that detects and classifies infrastructure issues from uploaded images using computer vision and Google Gemini.",
       image: "/images/projects/infravision.png",
@@ -78,7 +116,7 @@ const Home = () => {
       type: "web-app"
     },
     {
-      id: 3,
+      id: 5,
       title: "Weather Card",
       description: "A beautiful and responsive weather application that provides real-time weather information with modern UI design and smooth animations.",
       image: "/images/projects/weather-app.png",
@@ -97,7 +135,7 @@ const Home = () => {
       type: "static-page"
     },
     {
-      id: 4,
+      id: 6,
       title: "To-Do List",
       description: "A simple yet powerful todo list application with modern UI and local storage functionality for task management.",
       image: "/images/projects/todo-list.png",
@@ -116,7 +154,7 @@ const Home = () => {
       type: "static-page"
     },
     {
-      id: 5,
+      id: 7,
       title: "Campus Connect",
       description: "A Flutter mobile application designed to enhance campus connectivity and communication among students and faculty.",
       image: "/images/projects/campus-connect.png",
@@ -143,6 +181,7 @@ const Home = () => {
     { id: 'mobile', label: 'Mobile Apps', icon: Smartphone },
     { id: 'static', label: 'Static Pages', icon: Globe },
     { id: 'web', label: 'Web Apps', icon: Globe },
+    { id: 'tools', label: 'CLI Tools', icon: Code },
     { id: 'flutter', label: 'Flutter', icon: Smartphone }
   ]
 
@@ -151,6 +190,7 @@ const Home = () => {
     : projects.filter(project => {
         if (activeFilter === 'web') return project.type === 'web-app'
         if (activeFilter === 'flutter') return project.technologies.includes('Flutter')
+        if (activeFilter === 'tools') return project.category === 'tools'
         return project.category === activeFilter
       })
 
@@ -159,6 +199,7 @@ const Home = () => {
       case 'web-app': return Globe
       case 'mobile-app': return Smartphone
       case 'static-page': return Code
+      case 'cli-tool': return Code
       default: return Code
     }
   }
@@ -383,7 +424,7 @@ const Home = () => {
               </motion.button>
               
               <motion.a
-                href="https://drive.google.com/file/d/1T2ovn3WbnFihBeRqjgH686bbYwPWVpcF/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1YCMGGvMA8eJRTyD4NweMyxoFhR2yi8Ku/view?usp=sharing"
                 onClick={(e) => {
                   // e.preventDefault()
                   // Here you would typically trigger a download of your resume
@@ -573,11 +614,11 @@ const Home = () => {
               {/* Stats cards */}
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">5+</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">8+</div>
                   <p className="text-gray-600 dark:text-gray-400">Projects Completed</p>
                 </div>
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">10+</div>
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">20+</div>
                   <p className="text-gray-600 dark:text-gray-400">Technologies</p>
                 </div>
               </div>
@@ -650,7 +691,7 @@ const Home = () => {
               My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A showcase of my work ranging from full-stack applications and AI-powered solutions to mobile apps
+              A showcase of my work ranging from full-stack applications, AI-powered solutions, CLI tools, and mobile apps
             </p>
           </motion.div>
 

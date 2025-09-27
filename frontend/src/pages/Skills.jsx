@@ -32,7 +32,11 @@ const Skills = () => {
         { name: "Firebase", percentage: 80 },
         { name: "TensorFlow.js", percentage: 75 },
         { name: "MongoDB", percentage: 80 },
-        { name: "Tailwind CSS", percentage: 90 }
+        { name: "Tailwind CSS", percentage: 90 },
+        { name: "Vite", percentage: 85 },
+        { name: "AWS DynamoDB", percentage: 70 },
+        { name: "Leaflet", percentage: 75 },
+        { name: "OSRM", percentage: 70 }
       ]
     },
     {
@@ -48,7 +52,11 @@ const Skills = () => {
         { name: "Adobe XD", percentage: 65 },
         { name: "Jira", percentage: 75 },
         { name: "Docker", percentage: 60 },
-        { name: "AWS", percentage: 65 }
+        { name: "AWS", percentage: 65 },
+        { name: "NPM Publishing", percentage: 80 },
+        { name: "CLI Development", percentage: 85 },
+        { name: "Commander.js", percentage: 80 },
+        { name: "Chalk", percentage: 85 }
       ]
     }
   ]
@@ -64,10 +72,17 @@ const Skills = () => {
 
   const achievements = [
     {
-      title: "IBM Generative AI Explorer Certificate",
+      title: "Published NPM Package",
       year: "2025",
       icon: Award,
       gradient: "from-blue-500 to-purple-600",
+      description: "Published reusepkg CLI tool on npm registry with 50-80% disk space savings"
+    },
+    {
+      title: "IBM Generative AI Explorer Certificate",
+      year: "2025",
+      icon: Award,
+      gradient: "from-indigo-500 to-blue-600",
       description: "Certified in Generative AI technologies and applications"
     },
     {
@@ -90,6 +105,13 @@ const Skills = () => {
       icon: Award,
       gradient: "from-purple-500 to-pink-600",
       description: "GPA: 10/10 in SSC Board Examination"
+    },
+    {
+      title: "Open Source Contributor",
+      year: "2025",
+      icon: Code,
+      gradient: "from-emerald-500 to-teal-600",
+      description: "Active contributor to open source projects and CLI tools"
     }
   ]
 
@@ -99,7 +121,9 @@ const Skills = () => {
     "Redux", "Context API", "Hooks", "TypeScript", "Next.js", "Vue.js",
     "Angular", "Django", "Flask", "PostgreSQL", "MySQL", "Redis",
     "WebRTC", "Socket.io", "Jest", "Cypress", "Webpack", "Vite",
-    "NPM", "Yarn", "ESLint", "Prettier", "Husky", "CI/CD"
+    "NPM", "Yarn", "ESLint", "Prettier", "Husky", "CI/CD",
+    "Commander.js", "Chalk", "Inquirer", "OSRM", "Leaflet", "AWS DynamoDB",
+    "React Router", "Symlinks", "CLI Tools", "NPM Publishing", "Cross-platform"
   ]
 
   return (
