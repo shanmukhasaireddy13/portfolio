@@ -383,9 +383,9 @@ const Home = () => {
               </motion.button>
               
               <motion.a
-                href="#"
+                href="https://drive.google.com/file/d/1T2ovn3WbnFihBeRqjgH686bbYwPWVpcF/view?usp=drive_link"
                 onClick={(e) => {
-                  e.preventDefault()
+                  // e.preventDefault()
                   // Here you would typically trigger a download of your resume
                   console.log('Resume download triggered')
                 }}
@@ -393,7 +393,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Download CV</span>
+                <span>Download Resume</span>
                 <Download size={18} className="group-hover:animate-bounce" />
               </motion.a>
             </motion.div>
